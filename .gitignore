@@ -130,3 +130,6 @@ dmypy.json
 
 # Downloaded data
 *.txt.gz
+
+# Processed data
+*.csv
