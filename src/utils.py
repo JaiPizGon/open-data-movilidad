@@ -1,11 +1,13 @@
 """
-Utils.py files define a Paths object to manage paths to different folders in the project.
+Utils.py file define a Paths object to manage paths to different folders in the project.
 """
 
 import pathlib
 import os
-import shutil
 
+MAESTRA_VALID_VALUES = ('maestra1', 'maestra2')
+LOCATION_VALID_VALUES = ('distritos', 'municipios')
+BASE_URL = 'https://opendata-movilidad.mitma.es'
 
 class Paths():
     def __init__(self):
@@ -76,7 +78,7 @@ PATHS = Paths()
 
 def check_dirs():
     """Function to check project directories, create not detected folders.
-
+    
     Returns:
         bool: True if no error is produced during function execution
     """
@@ -89,7 +91,6 @@ def check_dirs():
                 os.makedirs(path)
             else:
                 print(f"{path} folder detected.")
-    
     if not PATHS.processed.exists():
         print(f"{PATHS.processed} folder not detected, creating it.")
         os.makedirs(PATHS.processed)
