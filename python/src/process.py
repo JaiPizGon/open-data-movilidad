@@ -7,7 +7,6 @@ import os
 
 import pandas as pd
 from tqdm import tqdm
-import click
 
 from utils import PATHS
 
@@ -47,11 +46,7 @@ def process_day(tarfile):
 
     return df
 
-@click.command()
-@click.option('--maestra-version', '-mv', default='maestra1', help="Version of maestra from where to download.")
-@click.option('--location', '-l', default='municipios', help="Locations of data.")
-@click.option('--update', '-u', is_flag=True, default='False', help="Update current files without overwriting.")
-@click.option('--force', '-f', is_flag=True, default='False', help="Force to redownload data even if it is already downloaded.")
+
 def process(day_files='all',
             exp='maestra1',
             res='municipios',
@@ -127,8 +122,4 @@ def process(day_files='all',
 
 
 if __name__ == '__main__':
-    process(day_files='all',
-            exp='maestra1',
-            res='municipios',
-            update=False,
-            force=False)
+    process()
