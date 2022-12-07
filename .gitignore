@@ -133,3 +133,5 @@ dmypy.json
 
 # Processed data
 *.csv
+.Rproj.user
+*rsconnect*
