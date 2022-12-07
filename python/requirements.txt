@@ -1,0 +1,7 @@
+pandas
+xlrd
+tqdm
+click
+requests
+plotly
+nbformat
