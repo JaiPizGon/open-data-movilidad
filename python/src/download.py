@@ -23,8 +23,8 @@ def download(maestra_version:str='maestra1',
             location:str='municipios', 
             update:bool=False, 
             force:bool=False,
-            start:datetime.date=datetime.date(2020, 6, 1),
-            end:datetime.date=datetime.date(2020, 6, 30)) -> list:  
+            start:datetime.date=datetime.date(2020, 2, 21),
+            end:datetime.date=datetime.date(2021, 5, 9)) -> list:  
     """Download files from opendata-movilidad
 
     Args:
